@@ -1,4 +1,4 @@
-# vue_demo
+# vue + vue rounter 的商城项目
 
 ## Project setup
 ```
