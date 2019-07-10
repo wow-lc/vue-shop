@@ -122,3 +122,9 @@ input, textarea {
 }
 /*居中*/
 .center{margin: 0 auto}
+
+/*文字单行隐藏 */
+.line-hidden{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

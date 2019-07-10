@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import './plugins/axios'
 import App from './App.vue'
 import router from './router'
 import store from './store'
@@ -10,8 +11,24 @@ import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 Vue.use(MintUI)
 
+// 设置全局过滤器
+// 引入moment
+import moment from 'moment'
+
+Vue.filter('dateFormat',function(dateStr,pattern='YYYY-MM-DD HH:mm:ss'){
+  if(dateStr.length === 10){
+    dateStr = parseInt(dateStr) * 1000;
+  }
+  else{
+    dateStr = parseInt(dateStr);
+  }
+
+  return moment(new Date(dateStr)).format(pattern)
+})
+
 // 引入mui
 import '../libs/mui/css/mui.min.css'
+import '../libs/mui/css/icons-extra.css'
 
 
 
