@@ -102,7 +102,7 @@ export default {
         )
         .then(res => {
           if (res.data.error_code !== 0)
-            return that.$toast("抱歉," + res.data.reason);
+            return that.$toast("我是服务返回的消息--" + res.data.reason);
           this.newsList = res.data.data;
         })
         .catch(err => {

@@ -11,6 +11,10 @@ import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 Vue.use(MintUI)
 
+// 引入vue-preview 图片缩略图
+import VuePreview from 'vue-preview'
+Vue.use(VuePreview)
+
 // 设置全局过滤器
 // 引入moment
 import moment from 'moment'

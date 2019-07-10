@@ -1,10 +1,16 @@
 <template>
-    <h3>search</h3>
+    <div>
+        
+    </div>
 </template>
 
 <script>
 export default {
-    
+    data(){
+        return{
+            value: 'hello vue' 
+        }
+    }
 }
 </script>
 

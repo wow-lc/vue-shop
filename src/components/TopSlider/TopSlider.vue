@@ -2,14 +2,14 @@
   <div class="allSort">
     <div class="sortMenu clearfix">
       <ul class="sortMenu-ul">
-        <li  :class="['cell',currsort === item.name?'active':'' ]" v-for="item in sortMenu" :key="item.name">
+        <li  :class="['cell',currsort === item.name?'active':'' ]" v-for="item in sortMenu" :key="item.name" @click="$emit('tabChange',item)">
           <span @click="getSortName(item.name)">{{item.sortname}}</span>
         </li>
       </ul>
       <!-- 这里暂时不处理 -->
       <!-- <div class="all" v-on:click="subitemsExpanded=!subitemsExpanded"> --> 
       <div class="all" v-on:click="$toast('@这里暂时未处理')">
-        <img src="../../assets/logo.png" alt />
+        <img  src="../../assets/logo.png" alt />
       </div>
       <div v-show="subitemsExpanded" class="pull-down">
         <ul class="pull-down-sort">

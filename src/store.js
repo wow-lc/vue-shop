@@ -4,10 +4,10 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
+  state: {  // this.$store.state.****
 
   },
-  mutations: {
+  mutations: { // this.$store.commit
 
   },
   actions: {

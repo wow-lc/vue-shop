@@ -37,14 +37,14 @@ export default {
                     <p class="art_p">译者：朴成奎</p><p style="text-align:right;" class="article-editor">责任编辑：张玉洁 SF107</p>		`
     };
   },
-  beforeCreate() {
-    document
-      .querySelector("body")
-      .setAttribute("style", "background-color:#efeff4");
-  },
-  destroyed() {
-    document.querySelector("body").setAttribute("style", 'background-color:white');
-  }
+  // beforeCreate() {
+  //   document
+  //     .querySelector("body")
+  //     .setAttribute("style", "background-color:#efeff4");
+  // },
+  // destroyed() {
+  //   document.querySelector("body").setAttribute("style", 'background-color:white');
+  // }
 };
 </script>
 <style lang="less">
