@@ -1,4 +1,11 @@
-# vue + vue rounter 的商城项目
+#  商城 + 新闻 + 娱乐的移动端网页
+# vue + vue router + vuex vue全家桶
+
+> 脚手架 vue-cli 3.0+  
+> http框架 axios   
+> CSS 预处理语言 less  
+> 组件框架 Mint-ui  + MUI  
+> 时间格式化js库 moment.js 
 
 ## Project setup
 ```
