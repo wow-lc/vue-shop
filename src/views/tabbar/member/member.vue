@@ -7,24 +7,25 @@
       </div>
       <img src="../../../assets/logo.png" width="60px" height="60px" />
     </div>
-    <!-- 订单管理菜单 -->
-    <card>
+    <div class="menu">
+      <!-- 订单管理菜单 -->
+    <card >
       <ul class="order-meun">
         <li>
           <img src="../../../assets/menu1.png" />
           <p>全部订单</p>
         </li>
         <li>
+          <img src="../../../assets/menu9.png" />
+          <p>待付款</p>
+        </li>
+        <li>
+          <img src="../../../assets/menu8.png"/>
+          <p>待发货</p>
+        </li>
+        <li>
           <img src="../../../assets/menu2.png" />
-          <p>全部订单</p>
-        </li>
-        <li>
-          <img src="../../../assets/menu3.png"/>
-          <p>全部订单</p>
-        </li>
-        <li>
-          <img src="../../../assets/menu4.png" />
-          <p>全部订单</p>
+          <p>待收货</p>
         </li>
       </ul>
     </card>
@@ -33,23 +34,25 @@
       <ul class="order-meun">
         <li>
           <img src="../../../assets/menu1.png" />
-          <p>全部订单</p>
+          <p>拼团商城</p>
         </li>
         <li>
           <img src="../../../assets/menu2.png" />
-          <p>全部订单</p>
+          <p>邀请好友</p>
         </li>
         <li>
           <img src="../../../assets/menu3.png"/>
-          <p>全部订单</p>
+          <p>意见反馈</p>
         </li>
         <li>
           <img src="../../../assets/menu4.png" />
-          <p>全部订单</p>
+          <p>帮助和客服</p>
         </li>
       </ul>
     </card>
     <mt-button  type="danger" size="large" @click="logout">退出登录</mt-button>
+    </div>
+    
   </div>
 </template>
 
@@ -99,11 +102,19 @@ export default {
       vertical-align: middle;
     }
   }
+  .menu{
+    position: relative;
+    top: -40px;
+  }
   ul.order-meun {
     display: flex;
     justify-content: space-around;
     li {
       width: 20%;
+      text-align: center;
+      p{
+          font-size: 12px;
+      }
       img{
           width: 80%;
           margin-bottom: 5px;

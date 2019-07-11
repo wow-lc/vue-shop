@@ -125,6 +125,23 @@ input, textarea {
 
 /*文字单行隐藏 */
 .line-hidden{
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+/* 多行文本溢出隐藏*/
+.imitate_ellipsis{
+    position:relative;
+    line-height:1.4em;
+    height:2.8em;
+    overflow:hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+    
+.imitate_ellipsis::after{
+    content:"...";
+    position:absolute;
+} 

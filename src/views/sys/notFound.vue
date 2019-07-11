@@ -11,7 +11,7 @@ export default {
       .setAttribute("style", "background-color:#ececec");
   },
   destroyed() {
-    document.querySelector("body").setAttribute("style", 'background-color:white');
+    document.querySelector("body").setAttribute("style", 'background-color:#efeff4');
   }
 };
 </script>

@@ -59,7 +59,7 @@
     </ul>
     <!-- recommoned-->
     <p class="p-title">今日推荐</p>
-    <product-list></product-list>
+    <product-list :products="products"></product-list>
   </div>
 </template>
 
@@ -69,7 +69,8 @@ import ProductList from "../../../components/ProductList/ProductList";
 export default {
   data() {
     return {
-      swiperPics: []
+      swiperPics: [],
+      products: []
     };
   },
   components: {
@@ -77,6 +78,7 @@ export default {
   },
   created() {
     this.getSwipePics();
+    this.getRecommoned();
   },
   methods: {
     getSwipePics() {
@@ -84,6 +86,51 @@ export default {
       this.$axios.get("/api/article/listArticle").then(rep => {
         this.swiperPics = rep.data.info.list;
       });
+    },
+    getRecommoned() {
+      // 获取推荐商品列表
+      this.products = [
+        {
+          id: 1,
+          title: "隔离美妆",
+          pic: "/product01.jpg",
+          desc: "[网红小白管 平价CPB] 性价比之王 DWDEW 控油洁面美肤",
+          newprice: "85",
+          oldprice: "220"
+        },
+        {
+          id: 2,
+          title: "隔离美妆",
+          pic: "/product01.jpg",
+          desc: "[网红小白管 平价CPB] 性价比之王 DWDEW 控油洁面美肤",
+          newprice: "85",
+          oldprice: "220"
+        },
+        {
+          id: 3,
+          title: "隔离美妆",
+          pic: "/product01.jpg",
+          desc: "[网红小白管 平价CPB] 性价比之王 DWDEW 控油洁面美肤",
+          newprice: "85",
+          oldprice: "220"
+        },
+        {
+          id: 4,
+          title: "隔离美妆",
+          pic: "/product01.jpg",
+          desc: "[网红小白管 平价CPB] 性价比之王 DWDEW 控油洁面美肤",
+          newprice: "85",
+          oldprice: "220"
+        },
+        {
+          id: 5,
+          title: "隔离美妆",
+          pic: "/product01.jpg",
+          desc: "[网红小白管 平价CPB] 性价比之王 DWDEW 控油洁面美肤",
+          newprice: "85",
+          oldprice: "220"
+        }
+      ];
     }
   }
 };
@@ -109,21 +156,23 @@ export default {
       }
     }
   }
+  .mui-grid-view.mui-grid-9 {
+    border: 0;
+    background-color: #efeff4;
+    // border-bottom: 1px solid #000000;
+    box-shadow: -1px -1px 2px gray;
+    li {
+      border: 0;
+    }
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
   .p-title {
     padding: 8px;
-    margin-bottom: 0;
-  }
-}
-
-.mui-grid-view.mui-grid-9 {
-  border: 0;
-  background-color: #efeff4;
-  li {
-    border: 0;
-  }
-  img {
-    width: 50px;
-    height: 50px;
+    margin-bottom: 6px;
+    box-shadow: -1px -1px 2px gray;
   }
 }
 </style>

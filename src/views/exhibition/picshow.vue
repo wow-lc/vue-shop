@@ -6,7 +6,7 @@
     <ul>
       <li v-for="(item,index) in picdatas" :key="index">
         <img v-lazy="item.url" @click="$toast('@我是懒加载图片哦')" />
-        <p>{{item.desc}}</p>
+        <p class="imitate_ellipsis">{{item.desc}}</p>
       </li>
     </ul>
     <!-- 加载更多按钮 -->
@@ -112,6 +112,7 @@ export default {
         padding: 5px;
         color: @c-white;
         background-color: rgba(190, 190, 190, 0.8);
+        height:4.2em;
       }
     }
   }

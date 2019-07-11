@@ -7,6 +7,7 @@ import search from './views/tabbar/search/search'
 import newsList from './views/news/list'
 import newsInfo from './views/news/info'
 import picshow from './views/exhibition/picshow'
+import product from './views/product/product'
 
 import notFound from './views/sys/notFound'
 Vue.use(Router)
@@ -50,6 +51,11 @@ export default new Router({
     {
       path:'/exhibition/list',
       component: picshow
+    },
+    {
+      path:'/product/:id',
+      component: product,
+      meta: { showTabbar: true }
     },
     {
       path:'*',
