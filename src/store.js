@@ -69,7 +69,6 @@ export default new Vuex.Store({
       var amount = 0;
       state.shopcar.forEach((item) => {
         if (item.inSelect) {
-          console.log(item.price * item.count );
           
           amount=  math.format(math.chain(math.bignumber(Math.round(item.price * item.count * 100)/100)).add(math.bignumber(amount)).done());
           count += item.count;

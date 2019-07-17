@@ -1,5 +1,6 @@
 <template>
   <div class="u-container">
+    <!-- 顶部 -->
     <div class="top">
       <div class="left">
         <p class="l-top">手机用户6845</p>
@@ -77,8 +78,6 @@ export default {
 <style lang="less" scoped>
 @font-color: #ffffff;
 .u-container {
-  position: relative;
-  z-index: 199;
   .top {
     height: 120px;
     padding-top: 22px;
@@ -87,6 +86,8 @@ export default {
     border-radius: 0 0 20% 20%;
     display: flex;
     justify-content: space-between;
+    position: relative;
+    z-index:100;
     .left {
       .l-top {
         font-size: 22px;
@@ -105,6 +106,7 @@ export default {
   .menu{
     position: relative;
     top: -40px;
+    z-index: 199;
   }
   ul.order-meun {
     display: flex;

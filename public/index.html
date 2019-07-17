@@ -1,17 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>vue_demo</title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but vue_demo doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title>vue_demo</title>
+  <style>
+    #loading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 999;
+    }
+
+    @keyframes updown {
+      0% {
+        transform: translateY(0px);
+      }
+      50%{
+        transform: translateY(5px);
+      }
+      100%{
+        transform: translateY(-5px);
+      }
+    }
+
+    #loading>div {
+      width: 10px;
+      height: 10px;
+      border-radius: 100% !important;
+      background-color: #279ece;
+      display: inline-block;
+      animation: updown 0.7s 0s infinite linear;
+    }
+
+    #loading>div:nth-child(2n-1){
+      animation-delay: 0.35s;
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but vue_demo doesn't work properly without JavaScript enabled. Please enable it to
+      continue.</strong>
+  </noscript>
+  <!-- 等待动画-->
+  <div id="loading">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+
 </html>

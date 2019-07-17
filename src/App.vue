@@ -2,7 +2,7 @@
   <div id="app" class="app-contanier">
     <!-- header  -->
     <header id="header" class="mui-bar mui-bar-nav">
-      <h1 class="mui-title">阿超商城</h1>
+      <h1 class="mui-title">{{$route.meta.titleName||'综合商城'}}</h1>
       <router-link to>
         <span @click="goback" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></span>
       </router-link>
@@ -48,7 +48,13 @@ export default {
 
       this.$router.go(-1);
     }
-  }
+  },
+  beforeCreate() {
+    var loading = document.getElementById('loading');
+    if(loading!=null){
+      document.body.removeChild(loading);
+    }
+  },
 };
 </script>
 

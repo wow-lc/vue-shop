@@ -34,7 +34,10 @@ Vue.filter('dateFormat',function(dateStr,pattern='YYYY-MM-DD HH:mm:ss'){
 import '../libs/mui/css/mui.min.css'
 import '../libs/mui/css/icons-extra.css'
 
-
+// 配置router的守卫对象
+router.afterEach((to, from, next) => {
+  // window.scrollTo(0, 0)
+});
 
 
 Vue.config.productionTip = false

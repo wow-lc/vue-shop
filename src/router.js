@@ -23,22 +23,29 @@ export default new Router({
     {
       path: '/home',
       component: home,
-      meta: { showTabbar: true }
+      meta: { 
+        showTabbar: true
+      }
     },
     {
       path: '/member',
       component: member,
-      meta: { showTabbar: true }
+      meta: { 
+        showTabbar: true,
+        titleName:'个人主页' 
+      }
     },
     {
       path: '/shopcar',
       component: shopcar,
-      meta: { showTabbar: true }
+      meta: { showTabbar: true,
+        titleName:'购物车'  }
     },
     {
       path: '/search',
       component: search,
-      meta: { showTabbar: true }
+      meta: { showTabbar: true,
+        titleName:'搜索'  }
     },
     {
       path: '/news/list',
