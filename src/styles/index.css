@@ -19,7 +19,6 @@ html, body {
 html {
     position: relative;
     margin: 0 auto;
-    max-width: 750px;
     min-width: 300px;
     font-size: 62.5%;
     overflow-y:scroll
